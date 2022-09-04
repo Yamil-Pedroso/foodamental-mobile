@@ -21,3 +21,46 @@
   .search-wrapper {
     position: relative;
   }
+
+  .couple-wrapper {
+    display: flex;
+    cursor: pointer;
+
+  }
+
+  .couple-wrapper i {
+    margin-bottom: 40px;
+  }
+
+  .couple-text {
+    margin-left: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    color: #5D6A0D;
+  }
+
+  .menu-wrapper {
+    margin-left: 30px;
+  }
+
+  .roll-menu-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    background-color: #5D6A0D;
+  }
+
+  .roll-menu-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-top-left-radius: 30px;
+  }
+
+  .fooda-text {
+    font-weight: bold;
+  }

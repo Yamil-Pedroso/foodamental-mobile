@@ -6,33 +6,51 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
       <span class="navbar-toggler-icon btn btn-dark"></span>
     </button>
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+    <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Foodamental</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h2 class="fooda-text" id="offcanvasDarkNavbarLabel">Foodamental</h2>
+        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body">
+      <div class="menu-wrapper">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
            <% if user_signed_in? %>
-          <li class="nav-item dropdown">
-            <%= image_tag "https://cdn-icons-png.flaticon.com/512/3033/3033143.png" , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
+          <!--<li class="nav-item dropdown">
+            <%#= image_tag "https://cdn-icons-png.flaticon.com/512/3033/3033143.png" , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          </li>-->
+          <li class="nav-item active">
+            <div class="couple-wrapper">
+              <i class="fa-solid fa-house-user fa-2x" style="color: #7a7a7a"></i>
+              <%= link_to "Home",  root_path, class: "couple-text"%>
             </div>
           </li>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <div class="couple-wrapper">
+              <i class="fa-solid fa-book fa-2x" style="color: #7a7a7a"></i>
+              <%= link_to "My experiences", root_path, class: "couple-text" %>
+            </div>
           </li>
           <li class="nav-item active">
-            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+            <div class="couple-wrapper">
+              <i class="fa-solid fa-clipboard-list fa-2x" style="color: #7a7a7a"></i>
+              <%= link_to "My listing", root_path, class: "couple-text" %>
+            </div>
+          </li>
+          <li class="nav-item active">
+            <div class="couple-wrapper">
+              <i class="fa-solid fa-right-from-bracket fa-2x" style="color: #7a7a7a"></i>
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "couple-text" %>
+            </div>
           </li>
            <% else %>
-             <li class="nav-item">
+             <li class="nav-item active">
                <%= link_to "Login", new_user_session_path, class: "nav-link" %>
              </li>
            <% end %>
           </ul>
+          <div class="roll-menu-img">
+            <img src="https://img.freepik.com/vector-gratis/salva-concepto-planeta-personas-que-cuidan-tierra_23-2148522570.jpg?w=1800&t=st=1662325050~exp=1662325650~hmac=a0dc8aee7610c36f511e5357767bcdf669b1b0efc8cea9604e7b9a6bcfa50786" alt="Logo">
+          </div>
       </div>
     </div>
   </div>
