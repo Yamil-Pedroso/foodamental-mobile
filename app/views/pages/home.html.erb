@@ -1,2 +1,59 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="page-wrapper">
+  <div class="page-container">
+    <%= render "shared/usersigning" %>
+  </div>
+  <div class="search-wrapper">
+    <input type="text" name="search" placeholder="Search..." class="searching" />
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+  <div class="banner-wrapper">
+      <div id="banner" style="background-image: url('https://images.unsplash.com/photo-1502741384106-56538427cde9?ixlib=rb-1.2.1&       ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2669&q=80');">
+         Hola Pic
+      </div>
+  </div>
+  <div class="options-wrapper">
+     <div class="opt">
+         <img src="https://cdn-icons-png.flaticon.com/512/1625/1625048.png" alt="pic" class="img-opt" />
+     </div>
+     <div class="opt">
+          <img src="https://cdn-icons-png.flaticon.com/512/2098/2098402.png" alt="pic" class="img-opt"/>
+     </div>
+     <div class="opt">
+        <img src="https://cdn-icons-png.flaticon.com/512/3565/3565418.png" alt="pic" class="img-opt"/>
+     </div>
+  </div>
+</div>
+
+<div class="card-container">
+  <div>
+    <h4>World's Recipes</h4>
+  </div>
+  <div class="recipes-card-wrapper">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?ixlib=rb-1.2.ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&  auto=format&fit=crop&w=1287&q=80" alt="recipe" />
+    </div>
+    <p>lorem ipsum tonnu alitum
+     Nosfritum</p>
+  </div>
+  <div class="recipes-card-wrapper">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506368249639-73a05d6f6488?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&  auto=format&fit=crop&w=1287&q=80" alt="recipe" />
+    </div>
+    <p>lorem ipsum tonnu alitum
+     Nosfritum</p>
+  </div>
+  <div class="recipes-card-wrapper">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1604634077373-a279cadc62c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&  auto=format&fit=crop&w=2670&q=80" alt="recipe" />
+    </div>
+    <p>lorem ipsum tonnu alitum
+     Nosfritum</p>
+  </div>
+  <div class="recipes-card-wrapper">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1562923690-e274ba919781?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&  auto=format&fit=crop&w=1376&q=80" alt="recipe" />
+    </div>
+    <p>lorem ipsum tonnu alitum
+     Nosfritum</p>
+  </div>
+</div>

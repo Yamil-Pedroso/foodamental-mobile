@@ -11,6 +11,15 @@
   </head>
 
   <body>
+     <%= render "shared/navbar" unless @disable_nav %>
+    <%= render "shared/flashes" %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
+     <div class="global-wrapper">
+    </div>
+     <div class="nm-wrapper">
+      <%= render "shared/navbarmobile" unless @disable_nav  %>
+    </div>
   </body>
 </html>

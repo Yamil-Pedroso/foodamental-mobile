@@ -1,0 +1,33 @@
+.card-container {
+    margin-top: 35px;
+  }
+
+  .card-container h4 {
+      text-align: center;
+      font-weight: bold;
+      color:rgba(41, 83, 62, 0.75);
+  }
+
+  .recipes-card-wrapper {
+      display: flex;
+      width: 90%;
+      margin: 0 auto;
+      height: 100px;
+      margin-top: 20px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: -1px 6px 18px -12px rgba(69, 97, 83, 0.75);
+  }
+
+  .card {
+    width: 30%;
+  }
+
+  .recipes-card-wrapper p {
+      margin-top:  25px;
+      margin-left: 15px;
+      color: rgb(79, 85, 82);
+      font-weight: bold;
+  }

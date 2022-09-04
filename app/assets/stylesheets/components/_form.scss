@@ -1,0 +1,53 @@
+.login-wrapper {
+    width: 390px;
+    height: 550px;
+    background-color: #95A530;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.login-content {
+  width: 85%;
+}
+
+.signup-wrapper {
+    width: 390px;
+    height: 550px;
+    background-color: #95A530;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.signup-content {
+  width: 85%;
+}
+
+.fg-wrapper {
+    width: 390px;
+    height: 400px;
+    background-color: #95A530;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.fg-content {
+  width: 85%;
+}
