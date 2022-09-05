@@ -3,6 +3,9 @@
     <%= link_to "Give us a new recipe", new_recipe_path %>
 </div>
 
+<% @recipes.each do |recipe| %>
+   <%= link_to recipe.title,  recipe_path(recipe) %>
+<% end %>
 
 <div class="map-wrapper">
   <div style="width: 100%; height: 600px;"
