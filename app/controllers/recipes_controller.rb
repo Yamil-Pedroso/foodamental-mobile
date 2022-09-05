@@ -15,20 +15,20 @@ class RecipesController < ApplicationController
   end
 
   def show
-
   end
 
   def new
     @recipe = Recipe.new
+    @recipes = Recipe.all
   end
 
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user = current_user
     if @recipe.save
-      redirect_to recipe_path(@recipe)
+      redirect_to @recipe, notice: "Recipe was successfully created."
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -37,13 +37,16 @@ class RecipesController < ApplicationController
   end
 
   def update
-    @recipe.update(recipe_params)
-    redirect_to recipe_path(@recipe)
+    if @recipes.update(recipe_params)
+      redirect_to @recipe, notice: "Recipe was successfully updated."
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
     @recipe.destroy
-    redirect_to recipes_path
+    redirect_to root_path, notice: "Recipe was successfully destroyed."
   end
 
   private
@@ -52,7 +55,7 @@ class RecipesController < ApplicationController
     end
 
     def recipe_params
-      params.require(:recipe).permit(:title, :description, :pic_url, :longitude, :latitude, :user_id)
+      params.require(:recipe).permit(:title, :description, :pic_url, :longitude, :latitude, :user_id, :address, photos: [])
     end
 
 end
