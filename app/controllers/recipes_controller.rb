@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
         lat: recipe.latitude,
         lng: recipe.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { recipe: recipe }),
-        image_url: helpers.asset_url('logo.png')
+        image_url: helpers.asset_url('yami.jpeg')
       }
     end
   end
