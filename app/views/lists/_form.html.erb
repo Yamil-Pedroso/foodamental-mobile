@@ -1,0 +1,9 @@
+<div class="create-profile-form">
+  <%= simple_form_for(@list, html: {"data-turbo": false}) do |f| %>
+
+    <%= f.input :name %>
+    <div class="submit-btn">
+      <%= f.submit %>
+   </div>
+  <% end %>
+</div>

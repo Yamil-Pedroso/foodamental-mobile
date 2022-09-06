@@ -64,3 +64,29 @@
   .fooda-text {
     font-weight: bold;
   }
+
+  .saving-list-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70vh;
+  }
+
+  .list-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .list-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+  }
+
+  .saving-text {
+    font-size: 2rem;
+    font-weight: bold;
+  }
