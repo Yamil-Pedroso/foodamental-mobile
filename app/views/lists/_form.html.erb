@@ -1,9 +1,14 @@
 <div class="create-profile-form">
   <%= simple_form_for(@list, html: {"data-turbo": false}) do |f| %>
 
-    <%= f.input :name %>
-    <div class="submit-btn">
-      <%= f.submit %>
-   </div>
+    <%= f.input :name, label: "New list" %>
+    <div class="btn-sc">
+      <div class="submit-btn">
+        <%= f.submit %>
+      </div>
+      <div>
+        <%= link_to "CANCEL", lists_path %>
+      </div>
+    </div>
   <% end %>
 </div>

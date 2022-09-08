@@ -18,12 +18,11 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.new
-    @list.user = current_user
+    @list = List.new(list_params)
 
     respond_to do |format|
       if @list.save
-        format.html { redirect_to list_url(@list), notice: 'List was successfully created.' }
+        format.html { redirect_to @list, notice: 'List was successfully created.' }
         format.json { render :show, status: :created, location: @list }
       else
         format.html { render :new }
@@ -58,6 +57,6 @@ class ListsController < ApplicationController
     end
 
     def list_params
-      params.require(:list).permit(:name, :user_id)
+      params.require(:list).permit(:name)
     end
 end
